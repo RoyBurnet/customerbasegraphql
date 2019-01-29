@@ -7,12 +7,6 @@
       "age": 36
     },
     {
-      "id": "2",
-      "name": "Keith Wilson",
-      "email": "kieth@gmail.com",
-      "age": 50
-    },
-    {
       "id": "3",
       "name": "Tom Jones",
       "email": "tom@gmail.com",
@@ -29,6 +23,12 @@
       "email": "harry@gmail.com",
       "age": 34,
       "id": "rytP7hhUW"
+    },
+    {
+      "name": "Cedrick Funk",
+      "email": "cfunk@gmail.com",
+      "age": 19,
+      "id": "r463dMc"
     }
   ]
 }
