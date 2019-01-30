@@ -33,18 +33,10 @@ const {
 const CustomerType = new GraphQLObjectType({
   name: 'Customer',
   fields: () => ({
-    id: {
-      type: GraphQLString
-    },
-    name: {
-      type: GraphQLString
-    },
-    email: {
-      type: GraphQLString
-    },
-    age: {
-      type: GraphQLInt
-    },
+    id: {type: GraphQLString},
+    name: {type: GraphQLString},
+    email: {type: GraphQLString},
+    age: {type: GraphQLInt},
   })
 })
 
@@ -55,9 +47,7 @@ const RootQuery = new GraphQLObjectType({
     customer: {
       type: CustomerType,
       args: {
-        id: {
-          type: GraphQLString
-        }
+        id: {type: GraphQLString}
       },
       resolve(parentValue, args) {
         /*for(let i = 0; i < customers.length; i++) {
@@ -86,15 +76,9 @@ const mutation = new GraphQLObjectType({
     addCustomer: {
       type: CustomerType,
       args: {
-        name: {
-          type: new GraphQLNonNull(GraphQLString)
-        },
-        email: {
-          type: new GraphQLNonNull(GraphQLString)
-        },
-        age: {
-          type: new GraphQLNonNull(GraphQLInt)
-        }
+        name: {type: new GraphQLNonNull(GraphQLString)},
+        email: {type: new GraphQLNonNull(GraphQLString)},
+        age: {type: new GraphQLNonNull(GraphQLInt)}
       },
       resolve(parentValue, args) {
         return axios.post('http://localhost:3000/customers', {
